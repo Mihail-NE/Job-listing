@@ -1,5 +1,5 @@
 import data from '../mock/data.json';
-import { JobPosition } from './JobPosition';
+import JobPosition from './JobPosition';
 
 const JobList = () => {
   return (
@@ -11,4 +11,4 @@ const JobList = () => {
   )
 }
 
-export {JobList};
+export default JobList;

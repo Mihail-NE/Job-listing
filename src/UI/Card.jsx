@@ -12,7 +12,7 @@ const Card = ({children, isFeatured, className}) => {
   )
 }
 
-export {Card};
+export default Card;
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
