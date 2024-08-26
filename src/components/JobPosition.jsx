@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import Stack from "../UI/Stack";
 
 const JobPosition = ({
+    handleAddFilter,
     // id,
     company,
     logo,
@@ -63,7 +64,9 @@ const JobPosition = ({
                 </div>
                 <Stack>
                     {badges.map((item) => (
-                        <Badge key={item}>{item}</Badge>
+                        <Badge onClick={() => handleAddFilter(item)} key={item}>
+                            {item}
+                        </Badge>
                     ))}
                 </Stack>
             </div>
@@ -87,4 +90,5 @@ JobPosition.propTypes = {
     location: PropTypes.string,
     languages: PropTypes.arrayOf(PropTypes.string),
     tools: PropTypes.arrayOf(PropTypes.string),
+    handleAddFilter: PropTypes.func,
 };

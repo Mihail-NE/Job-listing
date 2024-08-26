@@ -1,6 +1,6 @@
 export const selectAllPositions = (state) => state.positions;
 
-export const selectVisiblePosition = (state, filters = []) => {
+export const selectVisiblePositions = (state, filters = []) => {
     if (filters.length === 0) return state.positions;
 
     return state.positions.filter((pos) => {
@@ -11,8 +11,6 @@ export const selectVisiblePosition = (state, filters = []) => {
             ...pos.tools
         );
 
-        return filters.every((filter) => {
-            posFilters.includes(filter);
-        });
+        return filters.every((filter) => posFilters.includes(filter));
     });
 };

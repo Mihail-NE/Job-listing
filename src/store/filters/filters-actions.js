@@ -18,9 +18,6 @@ export function removeFilter(filter) {
 
 }
 
-export function clearFilters() {
-  return {
-    type: CLEAR_FILTERS
-  };
-
+export const clearFilter = {
+  type: CLEAR_FILTERS
 }
